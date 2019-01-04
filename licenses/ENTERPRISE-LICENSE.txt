@@ -1,0 +1,96 @@
+KONAKART ENTERPRISE EXTENSIONS END USER LICENCE AGREEMENT
+
+PLEASE READ ALL PARTS CAREFULLY. IN ORDER TO INSTALL THE KONAKART ENTERPRISE EXTENSIONS SOFTWARE ("THE SOFTWARE"), YOU MUST FIRST ACCEPT THE TERMS AND CONDITIONS OF THIS AGREEMENT. BY USING ALL OR ANY PORTION OF THE SOFTWARE YOU ACCEPT ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE THEN DO NOT INSTALL THE SOFTWARE. BY INSTALLING ANY UPDATED VERSION OF THE SOFTWARE WHICH MAY BE MADE AVAILABLE, YOU ACCEPT THAT THE TERMS OF THIS AGREEMENT APPLY TO SUCH UPDATED SOFTWARE.
+
+In this Agreement "Host" means the computer on which the Software is to be installed.
+
+1    Intellectual Property Rights
+
+The Software, its structure and algorithms, and the Information are protected by copyright and other intellectual property laws, and all intellectual property rights in them belong to DS Data Systems UK Limited ("DS Data Systems"), or its licensors. (Please note carefully the 3rd Party Software that is included in the product which is listed in Section 8). You may not reproduce, publish, transmit or create derivative works of the Software. Copying, storing or using the Software other than as permitted in Clause 2 is expressly prohibited unless you obtain prior written permission from DS Data Systems. 
+
+2    Permitted and Prohibited Uses
+
+During the term of this Agreement and as long as you comply with the terms of this agreement, you may use the Software only for your personal use or for the use of your company (this does not include other companies in your Group except in the case where you are using KonaKart in a multi-store configuration, when a store may belong to your company or to any 100%-owned subsidiary of your company who is automatically granted a run time license for the store).  You may make as many backup copies of the Software as you require. Once you have paid the appropriate annual license fee(s) (see Appendix A for details of the charges) you can install the Software only on the number of your own Hosts that your fee level permits.
+You are expressly prohibited from distributing the Software in any format, in whole or in part, for sale, or for commercial use or for any unlawful purpose. You must not make the software available to others by placing it on network file servers or on download servers of any description.
+You must not rent, lease, export or otherwise transfer the Software or allow it to be copied. Unless permitted by law, you must not reverse engineer, decompile or disassemble the Software.
+If running in single store mode:  One KonaKart Enterprise Extensions (EE) annual license covers one company to use KonaKart on one store. The annual license covers one production server and an unlimited number of development and test servers as long as they are being used for the same store. For example, if a company decides to develop a store for selling brand A of its products and another store for selling brand B, then each store requires a separate EE license. For load balancing and high availability purposes, every extra production server requires an additional server license (prices in the Appendix). 
+If running in multi-store mode:  If the KonaKart Enterprise Extensions (EE) are being used to run KonaKart in multi-store mode, then an unlimited number of stores owned by the same company may be deployed on a single server with a single EE license. Another server containing different stores, requires a new license. The annual license covers one production server and an unlimited number of development and test servers. For load balancing and high availability purposes, every extra production server requires an additional server license (prices in the Appendix). 
+You must not provide access to the Software to any party outside your company (including, for example, your chosen software development company).  If your application is being developed by another company or you are developing it for another company, both companies need to buy a license to use the Enterprise Extensions.
+If you are providing KonaKart stores as a hosted service to your customers each of your customers needs to buy an Enterprise Extensions license regardless of whether you are running KonaKart in single store or multi-store mode. If you are running multiple stores for the same customer in multi-store mode then that customer only requires one Enterprise Extensions license.
+If you have purchased the source code, you still need an Enterprise Extensions license to run the code that might be created using the supplied source.
+You must not remove any proprietary notices on the Software.
+You must not disclose benchmarks or other comparisons of the Software without DS Data Systems's prior written consent.
+You must not disclose any confidential information provided by DS Data Systems.
+
+3    Limited Warranty
+
+DS Data Systems warrants to the original licensee that the Software will perform substantially in accordance with any documentation provided for it for 90 days following first use.
+This limited Warranty applies only if any problem is reported to DS Data Systems during the above warranty period. It is void if the failure of the Software is the result of accident, abuse, misapplication or inappropriate use of the Software.
+If the Software does not perform according to the above warranty, then you must make a warranty claim in writing to DS Data Systems and your exclusive remedy will be for DS Data Systems to either, at its sole option, replace the Software or refund the license fee paid for the Software. 
+
+4    Limitation on Liability
+
+EXCEPT FOR THE EXPRESS WARRANTIES GIVEN IN THIS AGREEMENT, TO THE EXTENT PERMITTED BY LAW, DS DATA SYSTEMS DISCLAIMS ALL WARRANTIES ON THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY OF THIRD PARTY RIGHTS AND FITNESS FOR PARTICULAR PURPOSE. TO THE EXTENT PERMITTED BY LAW DS DATA SYSTEMS SHALL NOT BE LIABLE FOR ANY CONSEQUENTIAL INDIRECT OR INCIDENTAL LOSS OR DAMAGES WHATSOEVER INCLUDING WITHOUT LIMITATION LOST PROFITS OR SAVINGS ARISING OUT OF THE USE OF THE SOFTWARE, RELIANCE ON THE DATA PRODUCED OR INABILITY TO USE THE SOFTWARE (INCLUDING LOSS OR DAMAGE TO YOUR (OR ANY OTHER PERSON'S) DATA OR COMPUTER PROGRAMS) EVEN IF DS DATA SYSTEMS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+5    Export Control
+
+The United States and other countries control the export of Software and information. You are responsible for compliance with the laws of your local jurisdiction regarding the import, export or re-export of the Software, and agree to comply with such restrictions and not to export or re-export the Software where this is prohibited. By downloading the Software, you are agreeing that you are not a person or entity to which such export is prohibited. DS Data Systems UK Limited is a United Kingdom Limited company.
+
+6    Term and Termination
+
+If the appropriate annual license fee has been paid you are granted a non-exclusive, royalty free license to use the Software. 
+
+Each party may terminate this license immediately by giving notice to the other party in the event the other party is in material breach of this Agreement (where such material breach is incapable of remedy) or where such material breach is capable the party claiming material breach will serve notice on the other party stipulating the material breach and the actions required to remedy such material breach ("Remediation Notice"). Where such remedial material breach is not remedied within 30 days of such notice the party serving the Remediation Notice may immediately terminate this license upon written notice to the party in breach.
+In all cases above, you are no longer allowed to use the Software and you must delete and destroy all copies of the Software in your possession and under your control.
+
+7    General Terms
+
+The construction, validity and performance of this Agreement shall be governed in all respects by English law, and the Parties agree to submit to the exclusive jurisdiction of the English courts.
+If any provision of this agreement is found to be invalid by any court having competent jurisdiction, the invalidity of such provision shall not affect the validity of the remaining provisions of this agreement, which shall remain in full force and effect.
+Despite anything else contained in this Agreement, neither party will be liable for any delay in performing its obligations under this Agreement if that delay is caused by circumstances beyond its reasonable control (including, without limitation, any delay caused by an act or omission of the other party) and the party affected will be entitled to a reasonable extension of time for the performance of its obligations.
+No waiver of any term of this agreement shall be deemed a further or continuing waiver of such term or any other term.
+Except as expressly set out in this Agreement neither party may assign, subcontract, sub-license or otherwise transfer any of its rights or obligations under this Agreement without the written consent of the other party such consent not to be unreasonably withheld or delayed.
+This agreement constitutes the entire agreement between you and DS Data Systems.
+
+8    3rd Party Software. 
+
+This product includes software developed by others, and the use of such contributions is subject to the terms of the respective developer's license agreement, copies of which may be found in the accompanying files. This third-party software and their licenses are identified as follows:
+
+Activation Framework (activation*.jar)          See accompanying activation.license.txt file.
+ActiveMQ (activemq-*.jar)                       See accompanying apache.license.txt file. 
+ANTLR (antlr*.jar)                              See accompanying antlr.license.txt file.
+Apache Tomcat/Catalina (various jars etc)       See accompanying apache.license.txt file.
+Apache Commons libraries (commons-*.jar)        See accompanying apache.license.txt file.
+Axis (axis.jar,saaj.jar,jaxrpc.jar,wsdl4j.jar)  See accompanying apache.license.txt file.
+CDI (cdi*.jar).                                 See accompanying apache.license.txt file.
+DB2 JDBC driver (db2jcc*.jar)                   See accompanying ibm.db2.jdbc.type4.driver.redistribution.license.txt file.
+Flying Saucer (core-renderer.jar,iText-*.jar)   See accompanying flyingsaucer.license.txt file.
+Guava (guava*.jar)                              See accompanying apache.license.txt file.
+GWT (gwt-servlet.jar)                           See accompanying apache.license.txt file.
+Jackson (jackson-*.jar)                         See accompanying LGPL-2.1.txt
+Jakarta-Oro (oro*.jar, jakarta-oro.jar)         See accompanying apache.license.txt file.
+JavaMail (javax.mail*.jar)                      See accompanying CDDL-LICENSE.TXT file.
+JAXB (jaxb-impl.jar)                            See accompanying CDDL-LICENSE.TXT and GPL2-LICENSE.TXT files
+JCS (jcs-*.jar)                                 See accompanying apache.license.txt file.
+JDOM (jdom-*.jar)                               See accompanying jdom.license.txt file.
+JSR (jsr*.jar)                                  See accompanying CDDL-LICENSE.TXT and GPL2-LICENSE.TXT files
+jTDS (jtds*.jar)                                See accompanying jtds.license.txt.
+Log4J (log4j*.jar)                              See accompanying apache.license.txt file.
+MySQL (mysql*.jar)                              See accompanying mysql.license.txt file.
+Oracle JDBC driver (ojdbc*.jar)                 See accompanying oracle.license.txt file.
+PDFBox Java PDF Library (PDFBox-*.jar)          See accompanying pdfbox.license.pdf file.
+PostgreSQL JDBC driver (postgresql*.jar)        See accompanying postgresql.license.txt file.
+Quartz (quartz-*.jar, c3p0*.jar)                See accompanying apache.license.txt file.
+SLF4J (slf4j-*.jar)                             See accompanying mit.license.txt file.
+Solr/Lucence/Zookeeper                          See accompanying licenses under solr/licenses.
+Stratum (stratum-*.jar)                         See accompanying apache.license.txt file.
+Struts (struts.jar)                             See accompanying apache.license.txt file.
+Torque (included in konakart-torque-*.jar)      See accompanying apache.license.txt file. 
+Velocity (velocity-*.jar)                       See accompanying apache.license.txt file. 
+Village (included in konakart-village-*.jar)    See accompanying apache.license.txt file. 
+Xerces (xerces.jar)                             See accompanying apache.license.txt file.
+XML Apis (xml-apis-*.jar)                       See accompanying dom.license.txt & sax.license.txt file.
+
+Unless otherwise indicated, all Content made available by the Eclipse Foundation is provided under the terms and conditions of the Eclipse Public License Version 1.0 ("EPL"). A copy of the EPL is provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html. 
+
+Copyright 2018 DS Data Systems UK Ltd., All Rights Reserved.

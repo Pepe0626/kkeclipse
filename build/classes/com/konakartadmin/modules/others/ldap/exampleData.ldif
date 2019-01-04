@@ -1,0 +1,57 @@
+## DEFINE DIT ROOT/BASE/SUFFIX ####
+## uses RFC 2377 format
+## replace example and com as necessary below
+## or for experimentation leave as is
+
+## dcObject is an AUXILLIARY objectclass and MUST
+## have a STRUCTURAL objectclass (organization in this case)
+# this is an ENTRY sequence and is preceded by a BLANK line
+
+dn: dc=example,dc=com
+dc: example
+description: My wonderful company
+objectClass: dcObject
+objectClass: organization
+o: Example, Inc.
+
+## FIRST Level hierarchy - people 
+## uses mixed upper and lower case for objectclass
+# this is an ENTRY sequence and is preceded by a BLANK line
+
+dn: ou=people, dc=example,dc=com
+ou: people
+description: All people in organisation
+objectclass: organizationalunit
+
+## SECOND Level hierarchy
+# this is an ENTRY sequence and is preceded by a BLANK line
+
+dn: cn=Robert Smith,ou=people,dc=example,dc=com
+objectclass: inetOrgPerson
+cn: Robert Smith
+cn: Robert J Smith
+cn: bob  smith
+sn: smith
+uid: rjsmith
+userpassword: rJsmitH
+carlicense: HISCAR 123
+homephone:             555-111-2222      
+mail: r.smith@example.com
+mail: rsmith@example.com
+mail: bob.smith@example.com
+description: swell guy
+
+dn: cn=Peter Jones,ou=people,dc=example,dc=com
+objectclass: inetOrgPerson
+cn: Peter Jones
+cn: Peter R Jones
+cn: Pete Jones
+sn: jones
+uid: prjones
+userpassword: pJoneS
+carlicense: HISCAR 321
+homephone:            123-456-2134      
+mail: p.jones@example.com
+mail: pjones@example.com
+mail: peter.jones@example.com
+description: grumpy

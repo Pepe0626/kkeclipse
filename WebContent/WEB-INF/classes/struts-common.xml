@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/> 
+ 	<constant name="struts.xwork.chaining.copyErrors" value="true"/>  
+ 	<constant name="struts.xwork.chaining.copyMessages" value="true"/>  
+
+    <package name="struts-common" namespace="/" extends="struts-default">
+<!-- Portlet <package namespace="/" extends="struts-portlet-tiles-default" name="struts-common"> -->
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+		</result-types>
+
+		<interceptors>
+			<interceptor name="logging" class="com.konakart.actions.interceptors.LoggingInterceptor"/>
+			<interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+			<interceptor name="forcePost" class="com.konakart.actions.interceptors.ForceAPostInterceptor"/>
+			<!-- May be used to force browser not to cache a page -->
+			<interceptor name="noCache" class="com.konakart.actions.interceptors.NoCacheInterceptor"/>
+			<!-- Removed validation and workflow from default stack -->
+			<interceptor-stack name="kkDefaultStack">
+				<interceptor-ref name="exception"/>
+				<interceptor-ref name="alias"/>
+				<interceptor-ref name="servletConfig"/>
+				<interceptor-ref name="i18n"/>
+				<interceptor-ref name="prepare"/>
+				<interceptor-ref name="chain"/>
+				<interceptor-ref name="scopedModelDriven"/>
+				<interceptor-ref name="modelDriven"/>
+				<interceptor-ref name="fileUpload"/>
+				<interceptor-ref name="checkbox"/>
+				<interceptor-ref name="multiselect"/>
+				<interceptor-ref name="staticParams"/>
+				<interceptor-ref name="actionMappingParams"/>
+				<interceptor-ref name="params">
+                    <param name="excludeParams">(.*\.|^|.*|\[('|"))(c|C)lass(\.|('|")]|\[).*,^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+				</interceptor-ref>
+			 	<interceptor-ref name="conversionError"/> 
+				<interceptor-ref name="debugging"/>
+				<interceptor-ref name="json" />
+				<interceptor-ref name="logging" />
+			</interceptor-stack>
+			
+			<interceptor-stack name="standardStack">
+				<interceptor-ref name="kkDefaultStack" />
+				<interceptor-ref name="noCache"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="forcePostStack">
+				<interceptor-ref name="forcePost" />
+				<interceptor-ref name="kkDefaultStack" />
+				<interceptor-ref name="noCache"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="allowCacheStack">
+				<interceptor-ref name="kkDefaultStack" />
+			</interceptor-stack>
+			
+		</interceptors>
+		<default-interceptor-ref name="standardStack"></default-interceptor-ref>
+		
+		
+		<!--  Default Action -->
+		<default-action-ref name="Default"></default-action-ref>
+		
+		<global-results>
+			<result name="Welcome" type="chain">Welcome</result>
+			<result name="Login" type="redirectAction">LogIn</result>
+			<result name="Exception" type="tiles">exception.summary.page</result>
+			<result name="Unavailable" type="tiles">unavailable.page</result>
+		</global-results>
+				
+	</package>	
+</struts>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<include file="struts-common.xml"></include>
+	<package name="struts-b2b" namespace="/" extends="struts-default,struts-common">
+<!-- Portlet <package namespace="/" extends="struts-portlet-tiles-default,struts-common" name="struts-b2b"> -->
+		<action name="B2BAddressBook" class="com.konakart.actions.B2BAddressBookAction">
+			<result name="success" type="tiles">catalog.b2baddressbook.page</result>
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BCustomerState" class="com.konakart.actions.B2BCustomerStateAction">
+			<result name="success"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BCustomerRegistration" class="com.konakart.actions.B2BCustomerRegistrationAction">
+			<result name="success" type="tiles">catalog.b2bregistercustomer.page</result>
+		</action>
+		<action name="B2BCustomerRegistrationSubmit" class="com.konakart.actions.B2BCustomerRegistrationSubmitAction">
+			<interceptor-ref name="forcePostStack"></interceptor-ref>
+			<result name="success" type="chain">B2BManageCustomers</result>		
+			<result name="ApplicationError" type="chain">B2BCustomerRegistration</result>	
+			<result name="ChangedCountry" type="chain">B2BCustomerRegistration</result>	
+		</action>
+		<action name="B2BCustomerRoles" class="com.konakart.actions.B2BCustomerRolesAction">
+			<result name="success" type="tiles">catalog.b2bcustomerroles.page</result>
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BCustomerRolesSubmit" class="com.konakart.actions.B2BCustomerRolesSubmitAction">
+			<interceptor-ref name="forcePostStack"></interceptor-ref>
+			<result name="success" type="chain">B2BManageCustomers</result>		
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BDeleteAddress" class="com.konakart.actions.B2BDeleteAddressAction">
+			<result name="success"  type="tiles">catalog.b2bdeleteaddr.page</result>
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>						
+		</action>
+		<action name="B2BDeleteAddressSubmit" class="com.konakart.actions.B2BDeleteAddressSubmitAction">
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>						
+		</action>
+		<action name="B2BDeleteCustomer" class="com.konakart.actions.B2BDeleteCustomerAction">
+			<result name="success"  type="tiles">catalog.b2bdeletecustomer.page</result>
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BDeleteCustomerSubmit" class="com.konakart.actions.B2BDeleteCustomerSubmitAction">
+			<result name="success"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BEditAddress" class="com.konakart.actions.B2BEditAddressAction">
+			<result name="success" type="tiles">catalog.b2beditaddress.page</result>
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>						
+		</action>
+		<action name="B2BEditAddressSubmit" class="com.konakart.actions.B2BEditAddressSubmitAction">
+			<interceptor-ref name="forcePostStack"></interceptor-ref>
+			<result name="ApplicationError" type="chain">B2BEditAddress</result>	
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>			
+			<result name="ChangedCountry" type="chain">
+			    <param name="actionName">B2BEditAddress</param>
+			    <param name="addrId">${addrId}</param>
+			 </result>			
+		</action>
+		<action name="B2BEditCustomer" class="com.konakart.actions.B2BEditCustomerAction">
+			<result name="success" type="tiles">catalog.b2bregistercustomer.page</result>
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+		</action>
+		<action name="B2BEditCustomerSubmit" class="com.konakart.actions.B2BEditCustomerSubmitAction">
+			<interceptor-ref name="forcePostStack"></interceptor-ref>
+			<result name="success" type="chain">B2BManageCustomers</result>		
+			<result name="ApplicationError" type="chain">B2BEditCustomer</result>	
+			<result name="B2BManageCustomers"  type="chain">B2BManageCustomers</result>
+			<result name="ChangedCountry" type="chain">
+			    <param name="actionName">B2BEditCustomer</param>
+			    <param name="custId">${editCustId}</param>
+			 </result>			
+		</action>
+		<action name="B2BManageCustomers" class="com.konakart.actions.B2BManageCustomersAction">
+			<result name="success" type="tiles">catalog.b2busers.page</result>
+			<result name="error" type="chain">MyAccount</result>	
+		</action>
+		<action name="B2BNewAddress" class="com.konakart.actions.B2BNewAddressAction">
+			<result name="success" type="tiles">catalog.b2beditaddress.page</result>
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>						
+		</action>
+		<action name="B2BNewAddressSubmit" class="com.konakart.actions.B2BNewAddressSubmitAction">
+			<interceptor-ref name="forcePostStack"></interceptor-ref>
+			<result name="success" type="chain">B2BAddressBook</result>		
+			<result name="ApplicationError" type="chain">B2BNewAddress</result>	
+			<result name="B2BAddressBook"  type="chain">
+			    <param name="actionName">B2BAddressBook</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>			
+			<result name="ChangedCountry" type="chain">
+			    <param name="actionName">B2BNewAddress</param>
+			    <param name="custId">${b2bCustId}</param>
+			 </result>			
+		</action>
+	</package>
+</struts>
